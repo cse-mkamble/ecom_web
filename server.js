@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const connectDB = require('./src/config/db')
 
 // Import Router
 const authRouter = require("./src/routes/auth");
@@ -19,18 +20,7 @@ const customizeRouter = require("./src/routes/customize");
 const { loginCheck } = require("./src/middleware/auth");
 
 // Database Connection
-mongoose
-  .connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
-  .then(() =>
-    console.log(
-      "==============Mongodb Database Connected Successfully=============="
-    )
-  )
-  .catch((err) => console.log("Database Not Connected !!!"));
+connectDB()
 
 // Middleware
 app.use(morgan("dev"));

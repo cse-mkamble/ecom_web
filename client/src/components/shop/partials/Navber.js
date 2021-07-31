@@ -31,8 +31,8 @@ const Navber = (props) => {
     <Fragment>
       {/* Navber Section */}
       <nav className="fixed top-0 w-full z-10 shadow-lg lg:shadow-none bg-white">
-        <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
-          <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
+        <div className="m-4 grid grid-cols-4 lg:grid-cols-2">
+          {/* <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/")}
@@ -51,9 +51,9 @@ const Navber = (props) => {
             >
               Contact us
             </span>
-          </div>
+          </div> */}
           <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
-            <svg
+            {/* <svg
               onClick={(e) => navberToggleOpen()}
               className="col-span-1 lg:hidden w-8 h-8 cursor-pointer text-gray-600"
               fill="none"
@@ -67,7 +67,7 @@ const Navber = (props) => {
                 strokeWidth={2}
                 d="M4 6h16M4 12h16M4 18h16"
               />
-            </svg>
+            </svg> */}
             <span
               onClick={(e) => history.push("/")}
               style={{ letterSpacing: "0.10rem" }}

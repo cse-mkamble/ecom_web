@@ -16,7 +16,8 @@ const Slider = (props) => {
 
   return (
     <Fragment>
-      <div className="relative mt-16 bg-gray-100 border-2">
+      {/* <div className="relative mt-16 bg-gray-100 border-2 " style={{ height: '400px', marginTop: '100px' }} > */}
+      <div className="relative bg-gray-100 border-2 " style={{ marginTop: '80px' }}  >
         {data.sliderImages.length > 0 ? (
           <img
             className="w-full"
@@ -28,7 +29,7 @@ const Slider = (props) => {
         )}
         <svg
           onClick={(e) => prevSlide(data.sliderImages.length, slide, setSlide)}
-          className={`z-10 absolute top-0 left-0 mt-64 flex justify-end items-center box-border flex justify-center w-12 h-12 text-gray-700  cursor-pointer hover:text-yellow-700`}
+          className={`z-10 absolute top-0 left-0 flex justify-end items-center box-border flex justify-center w-12 h-12 text-gray-700  cursor-pointer hover:text-yellow-700`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -43,7 +44,7 @@ const Slider = (props) => {
         </svg>
         <svg
           onClick={(e) => nextSlide(data.sliderImages.length, slide, setSlide)}
-          className={`z-10 absolute top-0 right-0 mt-64 flex justify-start items-center box-border flex justify-center w-12 h-12 text-gray-700 cursor-pointer hover:text-yellow-700`}
+          className={`z-10 absolute top-0 right-0 flex justify-start items-center box-border flex justify-center w-12 h-12 text-gray-700 cursor-pointer hover:text-yellow-700`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -56,7 +57,7 @@ const Slider = (props) => {
             d="M9 5l7 7-7 7"
           />
         </svg>
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* <div className="absolute inset-0 flex items-center justify-center">
           <a
             href="#shop"
             style={{ background: "#303031" }}
@@ -64,7 +65,7 @@ const Slider = (props) => {
           >
             Shop Now
           </a>
-        </div>
+        </div> */}
       </div>
       <OrderSuccessMessage />
     </Fragment>
